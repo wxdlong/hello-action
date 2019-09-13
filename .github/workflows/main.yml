@@ -1,3 +1,4 @@
+name: DockerAction
 on: [push]
 
 jobs:
