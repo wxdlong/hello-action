@@ -1,4 +1,4 @@
-name: DockerAction
+name: Hello Action
 on: [push]
 
 jobs:
@@ -8,9 +8,9 @@ jobs:
     steps:
     - name: Hello action step
       id: hello
-      uses: wxdlong/hello-action@v6
+      uses: wxdlong/hello-action@v7
       with:
-        who-to-greet: 'Mona the Octocat'
+        who-to-greet: 'wxdlong'
     # Use the output from the `hello` step
     - name: Get the output time
       run: echo "The time was ${{ steps.hello.outputs.time }}"
