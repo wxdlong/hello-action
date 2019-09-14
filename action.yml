@@ -7,7 +7,7 @@ inputs:
   who-to-greet: # id of input
     description: 'who to greet'
     required: true
-    default: 'World'
+    default: 'wxdlong'
 outputs:
   time:
     description: 'The time we greeted you'
