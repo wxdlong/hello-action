@@ -1,5 +1,8 @@
 name: 'Hello Action'
 description: 'Greet someone and record the time'
+branding:
+  icon: 'award'  
+  color: 'green'
 inputs:
   who-to-greet: # id of input
     description: 'who to greet'
