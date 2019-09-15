@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: Hello action step
       id: hello
-      uses: wxdlong/hello-action@v7
+      uses: wxdlong/hello-action@master
       with:
         who-to-greet: 'wxdlong'
     # Use the output from the `hello` step
