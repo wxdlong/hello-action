@@ -19,14 +19,14 @@ jobs:
         echo Hello Action!
     - name: git status
       env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }} 
       run: |
         git config --global credential.helper 'cache --timeout=3600'
         echo "===========   ENV ============"
         env
         echo "===========   LS ============"
         ls -lth
-        echo "$(date): $(whoami)Test" > test.log
+        echo "$(date): $(whoami)Test: ${GITHUB_REPOSITORY}" >> .github/test.log
         echo "===========   git config ============"
 
         git config -l
