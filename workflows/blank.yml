@@ -22,6 +22,7 @@ jobs:
         ls -lth
         echo "$(date): $(whoami)Test" > test.log
         echo "===========   git status ============"
+        git checkout -b test
         git status
         echo "===========   git config email ============"
         git config --global user.email "wxdlong@qq.com"
@@ -32,4 +33,5 @@ jobs:
         echo "===========   git commit ============"
         git commit -m "just test"
         echo "===========   git push ============"
+        
         git push --set-upstream origin "test"
