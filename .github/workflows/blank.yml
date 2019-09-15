@@ -22,6 +22,8 @@ jobs:
         ls -lth
         echo "$(date): $(whoami)Test" > test.log
         git status
+        git config --global user.email "wxdlong@qq.com"
+        git config --global user.name "wxdlong"
         git add test.log
         git commit -m "just test"
-        git push
+        git push --set-upstream origin "test"
