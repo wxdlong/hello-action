@@ -16,6 +16,9 @@ jobs:
         echo Hello Action!
     - name: git status
       run: |
+        echo "===========   ENV ============"
+        env
+        echo "===========   LS ============"
         ls -lth
         echo "$(date): $(whoami)Test" > test.log
         git status
