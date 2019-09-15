@@ -16,4 +16,9 @@ jobs:
         echo Hello Action!
     - name: git status
       run: |
+        ls -lth
+        echo "$(date): $(whoami)Test" > test.log
         git status
+        git add test.log
+        git commit -m "just test"
+        git push
