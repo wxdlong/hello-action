@@ -38,7 +38,7 @@ jobs:
         echo "===========   git config name ============"
         git config --global user.name "wxdlong"
         echo "===========   git add  ============"
-        git add test.log
+        git add .github/test.log
         echo -e " git remote :\n $(git remote -v)"
          echo -e " git branch :\n $(git branch -v)"
         echo "===========   git commit ============"
