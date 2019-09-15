@@ -37,4 +37,4 @@ jobs:
         git commit -m "just test"
         echo "===========   git push ============"
         
-        git push --set-upstream origin test
+        git push
