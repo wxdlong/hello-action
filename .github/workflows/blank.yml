@@ -19,11 +19,15 @@ jobs:
         echo Hello Action!
     - name: git status
       run: |
+        git config --global credential.helper 'cache --timeout=3600'
         echo "===========   ENV ============"
         env
         echo "===========   LS ============"
         ls -lth
         echo "$(date): $(whoami)Test" > test.log
+        echo "===========   git config ============"
+
+        git config -l
         echo "===========   git status ============"
         git checkout -b test
         git status
@@ -33,6 +37,8 @@ jobs:
         git config --global user.name "wxdlong"
         echo "===========   git add  ============"
         git add test.log
+        echo -e " git remote :\n $(git remote -v)"
+         echo -e " git branch :\n $(git branch -v)"
         echo "===========   git commit ============"
         git commit -m "just test"
         echo "===========   git push ============"
